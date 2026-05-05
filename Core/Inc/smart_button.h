@@ -36,11 +36,15 @@ typedef struct
   uint16_t dynamic_baseline;
   uint16_t press_threshold;
   uint16_t baseline_track_counter;
+  uint8_t current_gain_val;
+  uint16_t last_peak_adc;
+  uint8_t saturation_flag;
 } SmartBtn_t;
 
 extern SmartBtn_t Btn1;
 extern SmartBtn_t Btn2;
 
+void HW_SetGain(uint8_t gain_value);
 bool SmartBtn_HardwareCalibration(SmartBtn_t *btn);
 void SmartBtn_Update_And_Process(SmartBtn_t *btn);
 void SmartBtn_System_Init(void);

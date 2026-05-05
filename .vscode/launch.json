@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cortex Debug STM32G071",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/Debug/banbenfinal.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "stlink",
+            "device": "STM32G071xx",
+            "runToEntryPoint": "main",
+            "svdFile": "${workspaceFolder}/.vscode/STM32G071.svd"
+        }
+    ]
+}
